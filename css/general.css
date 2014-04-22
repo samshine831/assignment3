@@ -1,0 +1,223 @@
+@charset "utf-8";
+
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+<link href='http://fonts.googleapis.com/css?family=Syncopate' rel='stylesheet' type='text/css'>
+
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+    
+    font-size: 100%;
+}
+
+img {
+	width: 100%;
+    display: block;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #FFFFFF;
+}
+
+.logo {
+    width: 6rem;
+    height: auto;
+    float: left;
+    margin: 1.5rem 5%;
+}
+
+.nav-top {
+    clear: both;
+}
+
+.nav-top ul {
+    margin: 0;
+    padding: 0;
+    background-color: #ffe2e0;
+    background-image: url(../images/background.jpg);
+    text-align: center;
+    
+}
+
+.nav-top li {
+    margin:0;
+    padding: 0;
+    display: inline;
+    font color: white;
+    font-family: 'Syncopate', bauhaus std ,sans-serif;
+    font-size: 1.5rem;
+    
+}
+
+.nav-top a,
+.nav-top a:link
+.nav-top a:visited {
+    display: inline-block;
+    margin: 1rem 0 0;
+    padding: 1.5rem 10%;
+    color: white;
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+.selected {
+    background-color: #f89e9a;
+}
+
+article {
+    margin: 0;
+    padding: 1.5rem 5%;
+    overflow: hidden;
+}
+
+h1 {
+    margin: 0 0 1.5rem;
+    padding: 0;
+    font-size: 3rem;
+    font-family: 'Syncopate', bauhaus std ,sans-serif;
+    font-weight: lighter;
+}
+
+p {
+    font-size: 1.2rem;
+    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+    font color: black;
+}
+
+figcaption {
+    font-family: 'Syncopate', bauhaus std ,sans-serif;
+    position: center;
+}
+
+figure {
+    margin: 0 auto 1.5rem;
+    width: 80%;
+}
+
+figure a,
+figure a:link,
+figure a:visited{
+    font-size: .875rem;
+    color: black;
+    text-decoration: none;
+}
+
+footer {
+    margin: 0;
+    padding: 1.5rem 5% 6rem;
+    background-color: #f7574f;
+}
+
+.social {
+    padding: 1rem 2%; 
+    width: 60%;
+    margin: 3rem;
+}
+
+bucket1 { 
+    overflow:  hidden;
+    }
+
+.bucket1 figure {
+    margin: 0;
+    padding: 0;
+}
+
+.bucket1 a,
+.bucket1 a:link,
+.bucket1 a:visited {
+    float: left;
+    width: 45%; /* First and second buckets. 45% x 2 = 90% */ 
+    margin: 0 10% 1.5rem 0; /* First and second bucket right margins. 10% x 2 = 20%  */
+    padding: 0;
+    color: black;
+}
+
+/* THE PROBLEM: The sum total of figure + margin + figure must equal 100%. But we are currently over by 10% because all figures have right margin (figure + margin + figure + margin = 110%). We therefore need to use an "nth-child" to target every "even" (2nd, 4th etc.) figure to have no right margin. */
+
+.bucket1 a:nth-child(even) {/* every even numbered <figure> has no margin */
+    margin: 0;     
+}
+
+.bucket1 figcaption {
+    background-color:  white; /* Visual Aid */
+}
+
+/* Buckets as Unordered List (Same width/margin logic as above) */
+
+.bucket2 {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+.bucket2 li {
+    float: left;
+    width: 30%;
+    margin: 0 5% 1.5rem 0;
+    padding: 0;
+}
+
+.bucket2 li:nth-child(3) {
+    margin: 0;
+}
+
+.bucket2 a,
+.bucket2 a:link,
+.bucket2 a:visited {
+    display: block;
+    background-size: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 100% 0 0; /* height of image ÷ by width = % */
+}
+
+.facebook {
+    background-image: url(../images/facebook.png);  
+}
+
+.instagram {
+    background-image: url(../images/instagram.png);
+}
+
+.twitter {
+    background-image: url(../images/twitter.png);
+}
+
+/* Stacked buckets as Figure */
+
+.nav-bottom ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Syncopate', bauhaus std ,sans-serif;
+    font-weight: lighter;
+    color: white;
+}
+
+.nav-bottom a,
+.nav-bottom a:link
+.nav-bottom a:visited {
+    color: white;
+    text-decoration: none;
+    font-size: .875rem;
+}
